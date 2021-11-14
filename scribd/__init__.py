@@ -861,7 +861,7 @@ def send_request(method, **fields):
     while True:
         try:
             resp = post_multipart(HOST, REQUEST_PATH, fields.items(), headers, PORT)
-        except Exception, err:
+        except Exception as err:
             if time() - start_time < 10:
                 continue
             raise NotReadyError(str(err))
