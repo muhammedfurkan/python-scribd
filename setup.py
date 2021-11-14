@@ -119,7 +119,7 @@ def make_wiki_doc(object, destdir='', name=None):
     if name is None:
         name = object.__name__
     path = os.path.join(destdir, '%s.wiki' % name)
-    print 'writing %s' % path
+    print('writing %s' % path)
     if not os.path.exists(destdir):
         os.makedirs(destdir)
     open(path, 'w').write(text)
